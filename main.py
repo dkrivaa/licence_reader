@@ -6,7 +6,7 @@ import easyocr
 from PIL import Image
 
 
-org_img = cv2.imread('licence1.png')
+org_img = cv2.imread('licence7.png')
 
 # resize image to acceptable size
 h, w, _ = org_img.shape
@@ -46,6 +46,6 @@ reader = easyocr.Reader(['en'])
 result = reader.readtext(cropped_image)
 print(result)
 
-cv2.imshow('test', edged)
+cv2.imshow('test', cropped_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
